@@ -15,13 +15,13 @@ struct ContentView: View {
                     .font(.largeTitle)
                     .fontWeight(.medium)
                     .foregroundColor(Color.black)
-                    .padding()
+                    .padding(5)
                 NavigationLink(destination: NewSet()) {
                     Text("Create New Flashcard Set")
                         .frame(minWidth: 0, maxWidth: 300)
                         .padding()
                         .foregroundColor(.white)
-                            .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.blue]), startPoint: .leading, endPoint: .trailing))
+                            .background(LinearGradient(gradient: Gradient(colors: [Color.gray, Color.blue]), startPoint: .leading, endPoint: .trailing))
                         .cornerRadius(18)
                         .font(.title2)
                 }
@@ -31,7 +31,7 @@ struct ContentView: View {
                         .frame(minWidth: 0, maxWidth: 300)
                         .padding()
                         .foregroundColor(.white)
-                            .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.blue]), startPoint: .leading, endPoint: .trailing))
+                            .background(LinearGradient(gradient: Gradient(colors: [Color.gray, Color.blue]), startPoint: .leading, endPoint: .trailing))
                         .cornerRadius(18)
                         
                         .font(.title2)
