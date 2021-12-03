@@ -13,6 +13,10 @@
 		AA78DE022756CD43003BB181 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA78DE012756CD43003BB181 /* Preview Assets.xcassets */; };
 		AA78DE0D2756CD44003BB181 /* flipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA78DE0C2756CD44003BB181 /* flipTests.swift */; };
 		AA78DE182756CD44003BB181 /* flipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA78DE172756CD44003BB181 /* flipUITests.swift */; };
+		AA78DE26275958A3003BB181 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA78DE25275958A3003BB181 /* HomePage.swift */; };
+		AA78DE2827595D45003BB181 /* NewSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA78DE2727595D45003BB181 /* NewSet.swift */; };
+		AA78DE2A27595D56003BB181 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA78DE2927595D56003BB181 /* SwiftUIView.swift */; };
+		AA78DE2C27595D8D003BB181 /* Sets.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA78DE2B27595D8D003BB181 /* Sets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,10 @@
 		AA78DE132756CD44003BB181 /* flipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = flipUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA78DE172756CD44003BB181 /* flipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flipUITests.swift; sourceTree = "<group>"; };
 		AA78DE192756CD44003BB181 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA78DE25275958A3003BB181 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		AA78DE2727595D45003BB181 /* NewSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSet.swift; sourceTree = "<group>"; };
+		AA78DE2927595D56003BB181 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		AA78DE2B27595D8D003BB181 /* Sets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +105,13 @@
 			children = (
 				AA78DDFA2756CD41003BB181 /* flipApp.swift */,
 				AA78DDFC2756CD41003BB181 /* ContentView.swift */,
+				AA78DE2B27595D8D003BB181 /* Sets.swift */,
+				AA78DE2927595D56003BB181 /* SwiftUIView.swift */,
+				AA78DE2727595D45003BB181 /* NewSet.swift */,
 				AA78DDFE2756CD43003BB181 /* Assets.xcassets */,
 				AA78DE032756CD43003BB181 /* Info.plist */,
 				AA78DE002756CD43003BB181 /* Preview Content */,
+				AA78DE25275958A3003BB181 /* HomePage.swift */,
 			);
 			path = flip;
 			sourceTree = "<group>";
@@ -260,7 +272,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA78DDFD2756CD41003BB181 /* ContentView.swift in Sources */,
+				AA78DE2827595D45003BB181 /* NewSet.swift in Sources */,
+				AA78DE26275958A3003BB181 /* HomePage.swift in Sources */,
 				AA78DDFB2756CD41003BB181 /* flipApp.swift in Sources */,
+				AA78DE2C27595D8D003BB181 /* Sets.swift in Sources */,
+				AA78DE2A27595D56003BB181 /* SwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
