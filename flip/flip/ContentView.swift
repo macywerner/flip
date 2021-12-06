@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var sStore : SetStore = SetStore(sets: FlashData)
     var body: some View {
         NavigationView {
             VStack {
@@ -16,7 +17,7 @@ struct ContentView: View {
                     .fontWeight(.medium)
                     .foregroundColor(Color.black)
                     .padding(5)
-                NavigationLink(destination: NewSet()) {
+                NavigationLink(destination: NewSet(sStore: self.sStore)) {
                     Text("Create New Flashcard Set")
                         .frame(minWidth: 0, maxWidth: 300)
                         .padding()
@@ -33,7 +34,6 @@ struct ContentView: View {
                         .foregroundColor(.white)
                             .background(LinearGradient(gradient: Gradient(colors: [Color.gray, Color.blue]), startPoint: .leading, endPoint: .trailing))
                         .cornerRadius(18)
-                        
                         .font(.title2)
                 }
                 

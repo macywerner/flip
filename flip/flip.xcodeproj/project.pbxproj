@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		736F702D275EB03900A1B91A /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736F702C275EB03900A1B91A /* Set.swift */; };
+		736F702F275EB07B00A1B91A /* SetStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736F702E275EB07B00A1B91A /* SetStore.swift */; };
+		736F7031275EB23000A1B91A /* FlashcardData.json in Resources */ = {isa = PBXBuildFile; fileRef = 736F7030275EB23000A1B91A /* FlashcardData.json */; };
+		736F7033275EB27A00A1B91A /* FlashData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736F7032275EB27A00A1B91A /* FlashData.swift */; };
+		736F7037275EB5DA00A1B91A /* SetDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736F7036275EB5DA00A1B91A /* SetDetail.swift */; };
 		AA78DDFB2756CD41003BB181 /* flipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA78DDFA2756CD41003BB181 /* flipApp.swift */; };
 		AA78DDFD2756CD41003BB181 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA78DDFC2756CD41003BB181 /* ContentView.swift */; };
 		AA78DDFF2756CD43003BB181 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA78DDFE2756CD43003BB181 /* Assets.xcassets */; };
@@ -36,6 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		736F702C275EB03900A1B91A /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
+		736F702E275EB07B00A1B91A /* SetStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetStore.swift; sourceTree = "<group>"; };
+		736F7030275EB23000A1B91A /* FlashcardData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FlashcardData.json; sourceTree = SOURCE_ROOT; };
+		736F7032275EB27A00A1B91A /* FlashData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashData.swift; sourceTree = "<group>"; };
+		736F7036275EB5DA00A1B91A /* SetDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDetail.swift; sourceTree = "<group>"; };
 		AA78DDF72756CD41003BB181 /* flip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA78DDFA2756CD41003BB181 /* flipApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flipApp.swift; sourceTree = "<group>"; };
 		AA78DDFC2756CD41003BB181 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,7 +114,12 @@
 				AA78DDFA2756CD41003BB181 /* flipApp.swift */,
 				AA78DDFC2756CD41003BB181 /* ContentView.swift */,
 				AA78DE2B27595D8D003BB181 /* Sets.swift */,
+				736F7036275EB5DA00A1B91A /* SetDetail.swift */,
 				AA78DE2727595D45003BB181 /* NewSet.swift */,
+				736F7032275EB27A00A1B91A /* FlashData.swift */,
+				736F702C275EB03900A1B91A /* Set.swift */,
+				736F702E275EB07B00A1B91A /* SetStore.swift */,
+				736F7030275EB23000A1B91A /* FlashcardData.json */,
 				AA78DDFE2756CD43003BB181 /* Assets.xcassets */,
 				AA78DE032756CD43003BB181 /* Info.plist */,
 				AA78DE002756CD43003BB181 /* Preview Content */,
@@ -242,6 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				736F7031275EB23000A1B91A /* FlashcardData.json in Resources */,
 				AA78DE022756CD43003BB181 /* Preview Assets.xcassets in Resources */,
 				AA78DDFF2756CD43003BB181 /* Assets.xcassets in Resources */,
 			);
@@ -270,8 +286,12 @@
 			files = (
 				AA78DDFD2756CD41003BB181 /* ContentView.swift in Sources */,
 				AA78DE2827595D45003BB181 /* NewSet.swift in Sources */,
+				736F7033275EB27A00A1B91A /* FlashData.swift in Sources */,
+				736F702D275EB03900A1B91A /* Set.swift in Sources */,
 				AA78DE26275958A3003BB181 /* HomePage.swift in Sources */,
 				AA78DDFB2756CD41003BB181 /* flipApp.swift in Sources */,
+				736F702F275EB07B00A1B91A /* SetStore.swift in Sources */,
+				736F7037275EB5DA00A1B91A /* SetDetail.swift in Sources */,
 				AA78DE2C27595D8D003BB181 /* Sets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
