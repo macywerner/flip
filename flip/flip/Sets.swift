@@ -17,6 +17,8 @@ struct Sets: View {
                     ForEach (sStore.sets) { set in
                         ListCell(set: set)
                     }
+                    .onDelete(perform: deleteItems)
+                    .onMove(perform: moveItems)
                 }
                 .navigationBarTitle(Text("Your Flashcard Sets"))
                 .navigationBarItems(leading: NavigationLink(destination: NewSet(sStore: self.sStore)){

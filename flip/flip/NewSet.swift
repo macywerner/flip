@@ -8,17 +8,29 @@
 import SwiftUI
 
 struct NewSet: View {
+    @State var isComplete = false
+    @State var selection: Int? = nil
     @StateObject var sStore: SetStore
     @State private var name: String = ""
     @State private var description: String = ""
     var body: some View {
-        Form{
-            Section(header: Text("Flashcard Info")){
-                DataInput(title: "Flashcard set name", userInput: $name)
-                DataInput(title: "Description/Subject", userInput: $description)
-            }
-            Button(action: NewSet){
-                Text("Add Set")
+        NavigationView{
+            VStack{
+                Form{
+                    Section(header: Text("Flashcard Info")){
+                        DataInput(title: "Flashcard set name", userInput: $name)
+                        DataInput(title: "Description/Subject", userInput: $description)
+                    }
+        
+                }
+                NavigationLink(destination: Sets(), tag: 1, selection: $selection){
+                    Button(action: {
+                        NewSet()
+                        self.selection = 1
+                    }){
+                        Text("Add Set")
+                    }
+                }
             }
         }
     }
@@ -30,7 +42,9 @@ struct NewSet: View {
 
 struct NewSet_Previews: PreviewProvider {
     static var previews: some View {
-        NewSet(sStore: SetStore(sets: FlashData))
+        NavigationView{
+            NewSet(sStore: SetStore(sets: FlashData))
+        }
     }
 }
 
