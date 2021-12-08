@@ -11,12 +11,7 @@ struct SetDetail: View {
     let selectedSet: Set
     @State private var selection = 1
     var body: some View {
-        TabView{
-            CardList()
-                .tabItem {
-                    Label("Menu", systemImage: "list.dash")
-                }
-        }
+        CardList()
     }
 }
 

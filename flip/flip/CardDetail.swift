@@ -12,11 +12,11 @@ struct CardDetail: View {
     @State private var selection = 1
     var body: some View {
         TabView {
-            Front()
+            Front(selectedCard: card)
                 .tabItem {
                     Text("FRONT")
                 }
-            Back()
+            Back(selectedCard: card)
                 .tabItem {
                     Text("BACK")
                 }

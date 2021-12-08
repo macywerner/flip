@@ -44,7 +44,7 @@ struct CardList_Previews: PreviewProvider {
 struct ListCellCard: View {
     var card: Card
     var body: some View {
-        NavigationLink(destination: CardDetail(selectedCard: card)) {
+        NavigationLink(destination: CardDetail(card: card)) {
             HStack{
                 Text(card.front)
             }

@@ -9,8 +9,9 @@ import SwiftUI
 
 struct Back: View {
     @SceneStorage("mytext") private var editorText = ""
+    let selectedCard: Card
     var body: some View {
-        TextEditor(text: $editorText)
+        Text(selectedCard.back)
             .padding(30)
             .font(.largeTitle)
     }
@@ -18,6 +19,6 @@ struct Back: View {
 
 struct Back_Previews: PreviewProvider {
     static var previews: some View {
-        Back()
+        Back(selectedCard: CardData[0])
     }
 }
