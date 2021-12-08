@@ -15,12 +15,9 @@ struct SetDetail: View {
             CardList()
                 .tabItem {
                     Label("Menu", systemImage: "list.dash")
-                    
                 }
-            
         }
     }
-
 }
 
 struct SetDetail_Previews: PreviewProvider {

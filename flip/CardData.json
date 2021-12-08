@@ -1,5 +1,7 @@
 [
+    {
     "id" : "1A",
     "front" : "front",
-    "Back" : "back",
+    "back" : "back"
+    }
 ]
