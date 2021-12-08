@@ -28,7 +28,7 @@ struct NewCard: View {
                         NewCard()
                         self.selection = 1
                     }){
-                        Text("Add Set")
+                        Text("Add Card")
                     }
                 }
             }

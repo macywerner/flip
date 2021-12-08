@@ -8,18 +8,24 @@
 import SwiftUI
 
 struct CardDetail: View {
-    let selectedCard: Card
+    let card: Card
     @State private var selection = 1
     var body: some View {
-        Form {
-            //this is where the flashcard goes
-            //buttons for front, back, home, +
+        TabView {
+            Front()
+                .tabItem {
+                    Text("FRONT")
+                }
+            Back()
+                .tabItem {
+                    Text("BACK")
+                }
         }
     }
 }
 
 struct CardDetail_Previews: PreviewProvider {
     static var previews: some View {
-        CardDetail(selectedCard: CardData[0])
+        CardDetail(card: CardData[0])
     }
 }
