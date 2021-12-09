@@ -10,6 +10,8 @@ import UIKit
 
 struct CardList: View {
     @StateObject private var cStore : CardStore = CardStore(cards: CardData)
+    let selectedSet: Set
+
     var body: some View {
         VStack{
             NavigationView {
@@ -20,7 +22,7 @@ struct CardList: View {
                     .onDelete(perform: deleteItems)
                     .onMove(perform: moveItems)
                 }
-                .navigationBarTitle(Text("Cards"))
+                .navigationBarTitle(Text(selectedSet.name))
                 .navigationBarItems(leading: NavigationLink(destination: NewCard(cStore: self.cStore)){
                         Text("Add")
                 }, trailing: EditButton())
@@ -37,7 +39,7 @@ struct CardList: View {
 
 struct CardList_Previews: PreviewProvider {
     static var previews: some View {
-        CardList()
+        CardList(selectedSet: FlashData[0])
     }
 }
 

@@ -24,6 +24,7 @@
 		AA78DE2827595D45003BB181 /* NewSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA78DE2727595D45003BB181 /* NewSet.swift */; };
 		AA78DE2C27595D8D003BB181 /* Sets.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA78DE2B27595D8D003BB181 /* Sets.swift */; };
 		AA90114A2760734F00562E60 /* CardDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9011492760734F00562E60 /* CardDetail.swift */; };
+		AA90114E2762AE1700562E60 /* Added.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA90114D2762AE1700562E60 /* Added.swift */; };
 		AA9A969F2760608900440B96 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9A969E2760608900440B96 /* Card.swift */; };
 		AA9A96A1276060B100440B96 /* CardStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9A96A0276060B100440B96 /* CardStore.swift */; };
 		AA9A96A32760610200440B96 /* CardData.json in Resources */ = {isa = PBXBuildFile; fileRef = AA9A96A22760610200440B96 /* CardData.json */; };
@@ -72,6 +73,7 @@
 		AA78DE2727595D45003BB181 /* NewSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSet.swift; sourceTree = "<group>"; };
 		AA78DE2B27595D8D003BB181 /* Sets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sets.swift; sourceTree = "<group>"; };
 		AA9011492760734F00562E60 /* CardDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetail.swift; sourceTree = "<group>"; };
+		AA90114D2762AE1700562E60 /* Added.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Added.swift; sourceTree = "<group>"; };
 		AA9A969E2760608900440B96 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		AA9A96A0276060B100440B96 /* CardStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStore.swift; sourceTree = "<group>"; };
 		AA9A96A22760610200440B96 /* CardData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CardData.json; sourceTree = SOURCE_ROOT; };
@@ -137,6 +139,7 @@
 				AA9A96AA27606EEF00440B96 /* CardList.swift */,
 				AA9A96A62760643900440B96 /* NewCard.swift */,
 				AA78DE2727595D45003BB181 /* NewSet.swift */,
+				AA90114D2762AE1700562E60 /* Added.swift */,
 				736F7032275EB27A00A1B91A /* FlashData.swift */,
 				736F702C275EB03900A1B91A /* Set.swift */,
 				736F702E275EB07B00A1B91A /* SetStore.swift */,
@@ -313,6 +316,7 @@
 				73796F902760855C00ECA69E /* Front.swift in Sources */,
 				AA78DDFD2756CD41003BB181 /* ContentView.swift in Sources */,
 				AA78DE2827595D45003BB181 /* NewSet.swift in Sources */,
+				AA90114E2762AE1700562E60 /* Added.swift in Sources */,
 				736F7033275EB27A00A1B91A /* FlashData.swift in Sources */,
 				736F702D275EB03900A1B91A /* Set.swift in Sources */,
 				73796F92276085C900ECA69E /* Back.swift in Sources */,

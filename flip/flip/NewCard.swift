@@ -23,14 +23,10 @@ struct NewCard: View {
                     }
         
                 }
-                NavigationLink(destination: SetDetail(selectedSet: FlashData[0]), tag: 1, selection: $selection){
-                    Button(action: {
-                        NewCard()
-                        self.selection = 1
-                    }){
-                        Text("Add Card")
-                    }
+                Button("Add Card") {
+                    NewCard()
                 }
+                
             }
         }
     }

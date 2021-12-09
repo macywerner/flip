@@ -10,20 +10,27 @@ import UIKit
 
 struct Sets: View {
     @StateObject private var sStore : SetStore = SetStore(sets: FlashData)
+    @State var isModal: Bool = false
     var body: some View {
         VStack{
             NavigationView {
-                List {
-                    ForEach (sStore.sets) { set in
-                        ListCell(set: set)
+                VStack{
+                    List {
+                        ForEach (sStore.sets) { set in
+                            ListCell(set: set)
+                        }
+                        .onDelete(perform: deleteItems)
+                        .onMove(perform: moveItems)
                     }
-                    .onDelete(perform: deleteItems)
-                    .onMove(perform: moveItems)
+                    .navigationBarTitle(Text("Your Flashcard Sets"))
+                    .navigationBarItems (trailing: EditButton())
+                    Button("Add Set") {
+                        self.isModal = true
+                    }.sheet(isPresented: $isModal, content: {
+                        NewSet(sStore: self.sStore)
+                            })
+                    
                 }
-                .navigationBarTitle(Text("Your Flashcard Sets"))
-                .navigationBarItems(leading: NavigationLink(destination: NewSet(sStore: self.sStore)){
-                        Text("Add")
-                }, trailing: EditButton())
             }
         }
     }

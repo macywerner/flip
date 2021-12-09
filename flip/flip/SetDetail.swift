@@ -11,7 +11,7 @@ struct SetDetail: View {
     let selectedSet: Set
     @State private var selection = 1
     var body: some View {
-        CardList()
+        CardList(selectedSet: selectedSet)
     }
 }
 

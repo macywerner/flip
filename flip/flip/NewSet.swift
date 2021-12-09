@@ -23,7 +23,7 @@ struct NewSet: View {
                     }
         
                 }
-                NavigationLink(destination: Sets(), tag: 1, selection: $selection){
+                NavigationLink(destination: Text("Added! Swipe down :)"), tag: 1, selection: $selection){
                     Button(action: {
                         NewSet()
                         self.selection = 1
