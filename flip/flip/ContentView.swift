@@ -18,7 +18,7 @@ struct ContentView: View {
                     .foregroundColor(Color.black)
                     .padding(5)
                 NavigationLink(destination:
-                    Sets()) {
+                                Sets().navigationBarHidden(true)) {
                     Text("View Flashcard Sets")
                         .frame(minWidth: 0, maxWidth: 300)
                         .padding()

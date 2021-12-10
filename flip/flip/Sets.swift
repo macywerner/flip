@@ -29,7 +29,6 @@ struct Sets: View {
                     }.sheet(isPresented: $isModal, content: {
                         NewSet(sStore: self.sStore)
                             })
-                    
                 }
             }
         }

@@ -21,12 +21,15 @@ struct NewCard: View {
                         DataInput(title: "Term", userInput: $front)
                         DataInput(title: "Defintion", userInput: $back)
                     }
-        
                 }
-                Button("Add Card") {
-                    NewCard()
+                NavigationLink(destination: Text("Added! Swipe down :)"), tag: 1, selection: $selection){
+                    Button(action: {
+                        NewCard()
+                        self.selection = 1
+                    }){
+                        Text("Add Card")
+                    }
                 }
-                
             }
         }
     }

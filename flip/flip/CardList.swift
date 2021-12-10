@@ -11,21 +11,26 @@ import UIKit
 struct CardList: View {
     @StateObject private var cStore : CardStore = CardStore(cards: CardData)
     let selectedSet: Set
-
+    @State var isModal: Bool = false
     var body: some View {
         VStack{
             NavigationView {
-                List {
-                    ForEach (cStore.cards) { card in
-                        ListCellCard(card: card)
+                VStack {
+                    List {
+                        ForEach (cStore.cards) { card in
+                            ListCellCard(card: card)
+                        }
+                        .onDelete(perform: deleteItems)
+                        .onMove(perform: moveItems)
                     }
-                    .onDelete(perform: deleteItems)
-                    .onMove(perform: moveItems)
+                    .navigationBarTitle(Text(selectedSet.name))
+                    .navigationBarItems (trailing: EditButton())
+                    Button("Add Card"){
+                        self.isModal = true
+                    }.sheet(isPresented: $isModal, content: {
+                        NewCard(cStore: self.cStore)
+                            })
                 }
-                .navigationBarTitle(Text(selectedSet.name))
-                .navigationBarItems(leading: NavigationLink(destination: NewCard(cStore: self.cStore)){
-                        Text("Add")
-                }, trailing: EditButton())
             }
         }
     }
