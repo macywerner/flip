@@ -20,7 +20,7 @@ struct CardList: View {
                         .font(.title)
                     Text(selectedSet.description)
                         .font(.subheadline)
-                        .frame(width: 370, height: 30, alignment: .topLeading)
+                        .frame(width: 370, height: 70)
                     EditButton()
                         .padding(.leading, 350.0)
                     List {

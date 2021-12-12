@@ -32,6 +32,11 @@ struct CardDetail: View {
                         .frame(width: 300.0, height: 300.0)
                         .gesture(tap)
                 }
+                Button("+"){
+                    self.isModal = true
+                }.sheet(isPresented: $isModal, content: {
+                        NewCard(cStore: self.cStore)
+                })
             }
         }
     }
