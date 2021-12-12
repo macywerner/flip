@@ -13,23 +13,29 @@ struct CardList: View {
     let selectedSet: Set
     @State var isModal: Bool = false
     var body: some View {
-        VStack{
-            NavigationView {
+        VStack {
+            ZStack {
                 VStack {
+                    Text(selectedSet.name)
+                        .font(.title)
+                    Text(selectedSet.description)
+                        .font(.subheadline)
+                        .frame(width: 370, height: 30, alignment: .topLeading)
+                    EditButton()
+                        .padding(.leading, 350.0)
                     List {
                         ForEach (cStore.cards) { card in
                             ListCellCard(card: card)
+                            
                         }
                         .onDelete(perform: deleteItems)
                         .onMove(perform: moveItems)
                     }
-                    .navigationBarTitle(Text(selectedSet.name))
-                    .navigationBarItems (trailing: EditButton())
                     Button("Add Card"){
                         self.isModal = true
                     }.sheet(isPresented: $isModal, content: {
-                        NewCard(cStore: self.cStore)
-                            })
+                            NewCard(cStore: self.cStore)
+                    })
                 }
             }
         }

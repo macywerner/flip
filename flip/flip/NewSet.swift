@@ -23,7 +23,10 @@ struct NewSet: View {
                     }
         
                 }
-                NavigationLink(destination: Text("Added! Swipe down :)"), tag: 1, selection: $selection){
+                NavigationLink(destination: Text("Added! Swipe down :) \n \n \n                    ▼ \n                    ▼ \n                    ▼")
+                        .font(.title)
+                        .fontWeight(.medium)
+                    .navigationBarBackButtonHidden(true), tag: 1, selection: $selection){
                     Button(action: {
                         NewSet()
                         self.selection = 1

@@ -10,7 +10,15 @@ import UIKit
 
 struct Added: View {
     var body: some View {
-        Text("Added! Swipe down.")
+        VStack{
+            Text("▼")
+            Text("▼")
+            Text("▼")
+                .padding(.bottom, 100.0)
+            Text("Added! Swipe down.")
+                .font(.title2)
+                .fontWeight(.medium)
+        }
     }
 }
 

@@ -11,6 +11,7 @@ import UIKit
 struct Sets: View {
     @StateObject private var sStore : SetStore = SetStore(sets: FlashData)
     @State var isModal: Bool = false
+    @State private var isActive = false
     var body: some View {
         VStack{
             NavigationView {
@@ -26,6 +27,7 @@ struct Sets: View {
                     .navigationBarItems (trailing: EditButton())
                     Button("Add Set") {
                         self.isModal = true
+                        isActive = true
                     }.sheet(isPresented: $isModal, content: {
                         NewSet(sStore: self.sStore)
                             })

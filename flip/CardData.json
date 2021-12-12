@@ -1,7 +1,7 @@
 [
     {
     "id" : "1A",
-    "front" : "front",
-    "back" : "back"
+    "front" : "Class Instance",
+    "back" : " • Any changes made to the instance using those references will be performed on the same instance \n \n • A reference to the location in memory where that class instance resides \n \n • A change to the instance data using any one of those references changes the data for all other references"
     }
 ]

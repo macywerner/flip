@@ -22,7 +22,10 @@ struct NewCard: View {
                         DataInput(title: "Defintion", userInput: $back)
                     }
                 }
-                NavigationLink(destination: Text("Added! Swipe down :)"), tag: 1, selection: $selection){
+                NavigationLink(destination: Text("Added! Swipe down :) \n \n \n                    ▼ \n                    ▼ \n                    ▼")
+                        .font(.title)
+                        .fontWeight(.medium)
+                    .navigationBarBackButtonHidden(true), tag: 1, selection: $selection){
                     Button(action: {
                         NewCard()
                         self.selection = 1

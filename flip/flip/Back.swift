@@ -13,7 +13,7 @@ struct Back: View {
     var body: some View {
         Text(selectedCard.back)
             .padding(30)
-            .font(.largeTitle)
+            .font(.callout)
     }
 }
 
