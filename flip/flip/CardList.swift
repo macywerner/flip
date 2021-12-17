@@ -8,7 +8,6 @@
 import SwiftUI
 import UIKit
 
-//for each set, the list of cards contained
 struct CardList: View {
     @StateObject private var cStore : CardStore = CardStore(cards: CardData)
     let selectedSet: Set
@@ -17,29 +16,31 @@ struct CardList: View {
         VStack {
             ZStack {
                 VStack {
-                    //selected set title
+                    //show the title of the set
                     Text(selectedSet.name)
                         .font(.title)
-                    //selected set description
+                    //show the description of the set
                     Text(selectedSet.description)
                         .font(.subheadline)
                         .frame(width: 370, height: 70)
-                    //edit button
+                    //edit button to use onDelete and onMove methods below
                     EditButton()
                         .padding(.leading, 350.0)
-                    // list of cards in set
+                    //lists the flashcards in the specific set
                     List {
                         ForEach (cStore.cards) { card in
                             ListCellCard(card: card)
                             
                         }
-                        // functions of the edit button called
+                        //to delete a flashcard in the list and reorder the flashcards in the list
                         .onDelete(perform: deleteItems)
                         .onMove(perform: moveItems)
                     }
-                    // add card button through the use if a sheet
+                    //button to add a flashcard to the list of flashcards in the set
                     Button("Add Card"){
                         self.isModal = true
+                    //page will pop up when a flashcard is added
+                    //swipe down on the page to go back to the list of flashcards in the set, which should include the new added flashcard
                     }.sheet(isPresented: $isModal, content: {
                             NewCard(cStore: self.cStore)
                     })
@@ -47,11 +48,14 @@ struct CardList: View {
             }
         }
     }
-    // functions of the edit button
+    //function for onDelete above
     func deleteItems(at offsets: IndexSet){
+        //removes the flashcard from the list of flashcards
         cStore.cards.remove(atOffsets: offsets)
     }
+    //function for onMove above
     func moveItems(from source: IndexSet, to destination: Int) {
+        //moves items around
         cStore.cards.move(fromOffsets: source, toOffset: destination)
     }
 }
@@ -62,10 +66,11 @@ struct CardList_Previews: PreviewProvider {
     }
 }
 
-// navigation link to actual card for each card a set
+//for list function above
 struct ListCellCard: View {
     var card: Card
     var body: some View {
+        //use navigation link so that when a flashcard is clicked on, the front of the flashcard opens
         NavigationLink(destination: CardDetail(card: card)) {
             HStack{
                 Text(card.front)

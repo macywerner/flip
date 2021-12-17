@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-// what is contained on the back of a card
 struct Back: View {
     @SceneStorage("mytext") private var editorText = ""
     let selectedCard: Card
     var body: some View {
+        //page to show the back of the flashcard
         Text(selectedCard.back)
             .padding(30)
             .font(.callout)
