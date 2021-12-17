@@ -8,6 +8,7 @@
 import SwiftUI
 import UIKit
 
+//for each set, the list of cards contained
 struct CardList: View {
     @StateObject private var cStore : CardStore = CardStore(cards: CardData)
     let selectedSet: Set
@@ -16,21 +17,27 @@ struct CardList: View {
         VStack {
             ZStack {
                 VStack {
+                    //selected set title
                     Text(selectedSet.name)
                         .font(.title)
+                    //selected set description
                     Text(selectedSet.description)
                         .font(.subheadline)
                         .frame(width: 370, height: 70)
+                    //edit button
                     EditButton()
                         .padding(.leading, 350.0)
+                    // list of cards in set
                     List {
                         ForEach (cStore.cards) { card in
                             ListCellCard(card: card)
                             
                         }
+                        // functions of the edit button called
                         .onDelete(perform: deleteItems)
                         .onMove(perform: moveItems)
                     }
+                    // add card button through the use if a sheet
                     Button("Add Card"){
                         self.isModal = true
                     }.sheet(isPresented: $isModal, content: {
@@ -40,6 +47,7 @@ struct CardList: View {
             }
         }
     }
+    // functions of the edit button
     func deleteItems(at offsets: IndexSet){
         cStore.cards.remove(atOffsets: offsets)
     }
@@ -54,6 +62,7 @@ struct CardList_Previews: PreviewProvider {
     }
 }
 
+// navigation link to actual card for each card a set
 struct ListCellCard: View {
     var card: Card
     var body: some View {

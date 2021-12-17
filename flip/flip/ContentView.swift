@@ -7,16 +7,19 @@
 
 import SwiftUI
 
+//first page/ opening page
 struct ContentView: View {
     @StateObject private var sStore : SetStore = SetStore(sets: FlashData)
     var body: some View {
         NavigationView {
             VStack {
+                // name of app
                 Text("Flip")
                     .font(.largeTitle)
                     .fontWeight(.medium)
                     .foregroundColor(Color.black)
                     .padding(5)
+                // "button" that takes user to flashcard sets
                 NavigationLink(destination:
                                 Sets().navigationBarHidden(true)) {
                     Text("View Flashcard Sets")

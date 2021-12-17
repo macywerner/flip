@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// what is contained on the back of a card
 struct Back: View {
     @SceneStorage("mytext") private var editorText = ""
     let selectedCard: Card

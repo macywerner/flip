@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// what is contained on the front of a card
 struct Front: View {
     @AppStorage("mytext") var editorText: String = "Sample Text"
     let selectedCard: Card

@@ -8,6 +8,7 @@
 import SwiftUI
 import UIKit
 
+//list of sets page
 struct Sets: View {
     @StateObject private var sStore : SetStore = SetStore(sets: FlashData)
     @State var isModal: Bool = false
@@ -16,6 +17,7 @@ struct Sets: View {
         VStack{
             NavigationView {
                 VStack{
+                    // the actual list of the sets
                     List {
                         ForEach (sStore.sets) { set in
                             ListCell(set: set)
@@ -23,8 +25,11 @@ struct Sets: View {
                         .onDelete(perform: deleteItems)
                         .onMove(perform: moveItems)
                     }
+                    //title for page
                     .navigationBarTitle(Text("Your Flashcard Sets"))
+                    // edit in navigation bar
                     .navigationBarItems (trailing: EditButton())
+                    // button to add a set and bring you to the correct view through a sheet
                     Button("Add Set") {
                         self.isModal = true
                         isActive = true
@@ -35,6 +40,7 @@ struct Sets: View {
             }
         }
     }
+    // functions of the edit button
     func deleteItems(at offsets: IndexSet){
         sStore.sets.remove(atOffsets: offsets)
     }
@@ -49,6 +55,7 @@ struct Sets_Previews: PreviewProvider {
     }
 }
 
+// for each set in the list, navigation to correct cards
 struct ListCell: View {
     var set: Set
     var body: some View {
